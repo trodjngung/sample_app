@@ -18,6 +18,8 @@ gem 'childprocess'
 #test
 gem 'selenium-webdriver'
 gem 'capybara'
+gem 'cucumber-rails', '1.3.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
 #postgreSQL
 #gem 'pg'
