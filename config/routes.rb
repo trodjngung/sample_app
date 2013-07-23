@@ -2,12 +2,14 @@ SampleApp::Application.routes.draw do
 
 #them vao
   resources :users
+  resources :sessions, only: [:new, :create, :distroy]
   root 'static_pages#home'
   
   # get "user/new"
   # get "users/new"
   match '/signup' , to: 'users#new' , via: 'get'
-
+  match '/signin' , to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#distroy', via: 'delete'
   
   match '/help' ,    to: 'static_pages#help' ,          via: 'get'
   match '/about' ,   to: 'static_pages#about' ,         via: 'get'
